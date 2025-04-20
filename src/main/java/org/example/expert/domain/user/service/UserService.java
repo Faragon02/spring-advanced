@@ -29,6 +29,7 @@ public class UserService {
     @Transactional
     public void changePassword(long userId, @Valid  UserChangePasswordRequest userChangePasswordRequest) {
         //lv1 -3 코드 개선 퀴즈 - Validation
+
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new InvalidRequestException("User not found"));
 
