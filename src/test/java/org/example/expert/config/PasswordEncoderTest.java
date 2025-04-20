@@ -14,14 +14,14 @@ class PasswordEncoderTest {
     private PasswordEncoder passwordEncoder;
 
     @Test
-    void matches_메서드가_정상적으로_동작한다() {
+    void givenRawPasswordWhenEncodedThenMatchesSuccessfully(){
         // given
         String rawPassword = "testPassword";
         String encodedPassword = passwordEncoder.encode(rawPassword);
 
         // when
-        boolean matches = passwordEncoder.matches(encodedPassword, rawPassword);
-
+        //lv3 - TestCode 1
+        boolean matches = passwordEncoder.matches(rawPassword, encodedPassword);
         // then
         assertTrue(matches);
     }
