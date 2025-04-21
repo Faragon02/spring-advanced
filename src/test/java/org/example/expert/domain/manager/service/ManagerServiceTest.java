@@ -63,6 +63,8 @@ class ManagerServiceTest {
 
         given(todoRepository.findById(todoId)).willReturn(Optional.of(todo));
 
+
+        //lv3-TestCode3
         // when & then
         InvalidRequestException exception = assertThrows(InvalidRequestException.class, () ->
             managerService.saveManager(authUser, todoId, managerSaveRequest)

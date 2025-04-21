@@ -13,6 +13,7 @@ class PasswordEncoderTest {
     @InjectMocks
     private PasswordEncoder passwordEncoder;
 
+    //lv3-TestCode1
     @Test
     void givenRawPasswordWhenEncodedThenMatchesSuccessfully(){
         // given
